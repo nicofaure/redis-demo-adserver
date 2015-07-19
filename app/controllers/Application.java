@@ -10,7 +10,7 @@ public class Application extends Controller {
 
     public static Result index() {
 
-		// An example to test that redis client is working
+    	//An example to test that redis client is working
 		RedisClient client = SpringApplicationContext.getBean(RedisClient.class);
 		client.set("key", "value");
 

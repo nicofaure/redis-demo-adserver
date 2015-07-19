@@ -12,7 +12,7 @@ public class SpringApplicationContext {
 	public static void initialize() {
 		try {
 			ctx = new AnnotationConfigApplicationContext();
-			ctx.scan("spring.configurations", "redis");
+			ctx.scan("spring.configurations", "redis", "controllers", "services");
 			ctx.refresh();
 		} catch (Exception e) {
 			String msg = "Application Context could not be initialized properly";
